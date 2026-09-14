@@ -249,11 +249,11 @@ import{r as p,j as e,C as Y,S as L,O as K,u as P}from"./r3f-BFDIpzVt.js";import{
       float death = 1.0 - smoothstep(0.6, 1.0, lifeRatio);
       float alive_f = step(0.5, alive);
 
-      // Size: sparks tiny, uniform, delicate pinpricks
-      float baseSize = type < 0.5 ? 0.3 : 0.12;
+      // Size: sparks tiny, microscopic, absolute minimum subtlety
+      float baseSize = type < 0.5 ? 0.18 : 0.08;
       // Distance-based scaling
       float dist = length(position);
-      float perspScale = 70.0 / (-mvPos.z);
+      float perspScale = 45.0 / (-mvPos.z);
 
       vAlpha = birth * death * alive_f * (0.7 + 0.3 * pulse);
       gl_PointSize = baseSize * perspScale * (1.0 - lifeRatio * 0.4);
